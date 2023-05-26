@@ -1,0 +1,111 @@
+.qr__blog {
+    display: flex;
+    flex-direction: column;
+}
+
+.qr__blog-heading {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5rem;
+}
+
+.qr__blog-heading h1 {
+    font-family: var(--font-family);
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+}
+
+/* image container  */
+
+.qr__blog-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    align-items: center;
+}
+
+.qr__blog-container__groupa{
+    flex: 0.45;
+    margin-right: 3rem;
+    display: flex;
+}
+.qr__blog-container__groupa img{
+    max-width: 95%;
+    max-height: 14rem;
+    transition: transform .2s; /* Animation */
+    margin:  0.75rem auto;
+    display: block;
+
+}
+.qr__blog-container__groupa img:hover{
+transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.qr__blog-container__groupb{
+    flex: 1.1;
+    display: flex;
+    gap: 1.5em;
+
+}
+.qr__blog-container__groupb img{
+    gap: 1em;
+    transition: transform .2s; /* Animation */
+
+}
+.qr__blog-container__groupb img:hover{
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+ @media screen and (max-width: 990px) {
+        .qr__blog-container {
+            flex-direction: column;
+            gap: 1em;
+            
+        }
+    
+    
+        .qr__blog-container_groupa {
+            margin: 5rem 0;
+            
+        }
+    
+        .qr__blog-container_groupa .qr__blog-container_article  {
+           width: 48%;
+          
+        }
+    
+        .qr__blog-container_groupa .qr__blog-container_article-image {
+            height: 250px;
+
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+       
+        .qr__blog-container {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            align-items: center;
+        }
+    
+        .qr__blog-container_groupa .qr__blog-container_article  {
+           width: 100%;
+        
+        }
+    
+        .qr__blog-heading h1 {
+            font-size: 46px;
+            line-height: 52px;
+        }
+    }
+    
+    @media screen and (max-width: 550px) {
+        .qr__blog-heading h1 {
+            font-size: 34px;
+            line-height: 42px;
+        }
+    
+    }

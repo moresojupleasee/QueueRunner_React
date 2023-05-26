@@ -1,17 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import App from './App.tsx';
+import './index.css'
+import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom'
+import { QueuePage } from './containers/index.js';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+const router = createBrowserRouter([
+    {
+      path:'/',
+      element: <App/>
+    },
+    {
+      path:'/queue',
+      element: <QueuePage/>
+    }
+  ]);
+  
+
+ReactDOM.render(<RouterProvider router={router} />, document.getElementById('root'));
+
+
