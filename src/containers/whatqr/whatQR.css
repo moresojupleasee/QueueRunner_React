@@ -141,3 +141,30 @@
         min-width: 100%;
     }
 }
+
+@media screen and (max-width: 1056px) {
+  .qr__whatqr-feature .qr__features-container__feature {
+    flex-direction: column;
+  }
+  .qr__features-container {
+    flex-direction: column;
+    max-width: 850px;
+  }
+  .qr__features-heading h1 {
+    font-size: 15px;
+    max-width: 800px;
+  }
+  .qr__features-containers {
+    margin: 0;
+    align-items: left;
+  }
+  .qr__features {
+    margin: 0;
+  }
+
+  .qr__whatqr-heading h1 {
+    font-size: 28px;
+    line-height: 40px;
+    
+  }
+}
