@@ -19,7 +19,8 @@ app.get('/auth/twitch/callback', async (req, res) => {
           client_secret: '',
           code: code,
           grant_type: 'authorization_code',
-          redirect_uri: 'http://localhost:3000/queue/auth/twitch/callback', // Replace with your redirect URI
+          redirect_uri:
+            'http://queue-runner-react.vercel.app/queue/auth/twitch/callback', // Replace with your redirect URI
         },
       }
     )
